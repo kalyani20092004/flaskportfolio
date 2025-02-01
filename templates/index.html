@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">Portfolio</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to My Portfolio</h1>
+            <h2>I'm <span class="highlight">Bandi Kalyani</span></h2>
+            <div class="hero-buttons">
+                <div class="button-row">
+                    <a href="#contact" class="cta-button primary">Get In Touch</a>
+                    <a href="#projects" class="cta-button secondary">View My Work</a>
+                </div>
+                <div class="button-row">
+                    <a href="resume.pdf" class="cta-button secondary" target="_blank">View Resume</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="section-header">
+            <h2>About Me</h2>
+            <p class="section-subtitle">Get to know me better</p>
+        </div>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="{{url_for('static',filename='photo.jpg')}}" alt="Kalyani" class="round-photo">
+            </div>
+            <div class="about-text">
+                <div class="about-details">
+                    <div class="detail-item">
+                        <i class="fas fa-user"></i>
+                        <div>
+                            <h3>Background</h3>
+                            <p>Hello! My name is Kalyani, and I am a passionate Data Science student with a deep interest in uncovering insights and solving real-world problems through data. I thrive at the intersection of technology and analysis, utilizing tools like Python, R, and machine learning to extract meaningful patterns and drive impactful decisions.</p>
+
+                            <p> With a strong foundation in statistics, programming, and data visualization, I enjoy working on projects that turn complex datasets into actionable insights. Beyond academics, I am curious about the ever-evolving data science landscape and am always eager to learn and explore new techniques.</p>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <div>
+                            <h3>Interests</h3>
+                            <p>Data Exploration: I enjoy working with data to discover patterns and insights.</p>
+                            <p>Learning New Skills: I love exploring new tools and technologies to improve my understanding of data science.</p>
+                            <p>Reading: I enjoy learning about technology trends and advancements.</p>
+                            <p>Collaboration: I like working with teams and sharing ideas to achieve common goals.</p>
+                                
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-rocket"></i>
+                        <div>
+                            <h3>Goals</h3>
+                            <p>Professional Growth: Develop my expertise and grow into a successful and reliable professional.</p>
+                            <p>Making a Difference: Use my skills to contribute positively to society and make an impact.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="section-header">
+            <h2>Skills & Expertise</h2>
+            <p class="section-subtitle">What I bring to the table</p>
+        </div>
+        <div class="skills-container">
+            <div class="skills-category">
+                <h3>Technical Skills</h3>
+                <div class="skill-grid">
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>HTML</span>
+                    
+                        </div>    
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>CSS</span>
+                    
+                        </div>
+                     </div>   
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>JavaScript</span>
+                            
+                        </div>
+                    </div>
+                    <!-- Add more skills similarly -->
+                </div>
+            </div>
+            <div class="skills-category">
+                <h3>Soft Skills</h3>
+                <div class="soft-skills">
+                    <span class="skill-tag">Team Leadership</span>
+                    <span class="skill-tag">Problem Solving</span>
+                    <span class="skill-tag">Communication</span>
+                    <span class="skill-tag">Project Management</span>
+                </div>
+            </div>
+            <div class="skills-category">
+                <h3>Certifications</h3>
+                <div class="certifications">
+                    <div class="cert-item">
+                        <i class="fas fa-certificate" style="font-size: 40px;"></i>
+                        <div>
+                           
+                            <p>MS Office Specialist Certification</p>
+                            <p>Typing Proficiency Certificate ([WPM and Accuracy])</p>
+                            
+                            
+                        </div>
+                    </div>
+                    <!-- Add more certifications -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="section-header">
+            <h2>Featured Projects</h2>
+            <p class="section-subtitle">Some of my recent work</p>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="{{url_for('static',filename='project1.jpg')}}" alt="Project 1">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                        
+                            <a href="https://kalyani20092004.github.io/application/" class="project-link"><i class="fab fa-github"style="font-size: 40px;"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>JOB APPLICATION</h3>
+                    <p>This project is a Job Application Management System designed with html,css,javascript</p>
+                   
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="{{url_for('static',filename='project2.jpg')}}" alt="Project 2">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                        
+                            <a href="https://tejasri225254.github.io/E_Commerce/" class="project-link"><i class="fab fa-github"style="font-size: 40px;"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>E-Commerce</h3>
+                    <p>This is a e-commerce website with html,css,javascript</p>
+                   
+                </div>
+            </div>
+           
+           
+            <!-- Add more project cards -->
+        </div>
+    </section>
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="section-header">
+            <h2>Education</h2>
+            <p class="section-subtitle">Academic Background</p>
+        </div>
+        <div class="education-grid">
+            <div class="education-card">
+                <div class="education-icon">
+                    <i class="fas fa-graduation-cap" style="font-size: 70px;"></i>
+                </div>
+                <div class="education-info">
+                    <h3>SSC(10th class)</h3>
+                    <h4>Vijetha High School</h4>
+                    <p>2019 - 2020</p>
+                    <ul>
+                        
+                        <li>Percentage:99.5%</li>
+                    </ul>
+                </div>
+                <div class="education-info">
+                    <h3>Intermediate in MPC</h3>
+                    <h4>KBN College</h4>
+                    <p>2020 - 2022</p>
+                    <ul>
+                        
+                        <li>Percentage:87.5%</li>
+                    </ul>
+                </div>
+                <div class="education-info">
+                    <h3>Graduated in Bsc DataScience</h3>
+                    <h4>Krishna University </h4>
+                    <h4>KBN College</h4>
+                    <p>2022 - 2025</p>
+                    <ul>
+                        
+                        <li>Percentage:87.5%</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Add more education cards -->
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="section-header">
+            <h2>Get In Touch</h2>
+            <p class="section-subtitle">Let's work together</p>
+        </div>
+        <div class="contact-content">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h3>Email</h3>
+                        <p>kalyanibandi584@gmail.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h3>Phone</h3>
+                        <p>+91 8341884844</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-location-dot"></i>
+                    <div>
+                        <h3>Location</h3>
+                        <p>Vijayawada, India</p>
+                    </div>
+                </div>
+            </div>
+            <form class="contact-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Subject" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://github.com/kalyani20092004"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/kalyani-b-7987a32b6"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p>&copy; 2025 Kalyani. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Function to highlight active section in navigation
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - sectionHeight/3)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
